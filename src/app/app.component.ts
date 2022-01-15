@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'cmp-and-data-binding-deep-dive-assignment';
+  oddElements = [];
+  evenElements = [];
+
+  onGameStarted(value: number) {
+    if (value % 2 == 0) {
+      this.evenElements.push(value);
+    }
+    else {
+      this.oddElements.push(value);
+    }
+  }
 }
